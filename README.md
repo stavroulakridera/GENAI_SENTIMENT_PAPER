@@ -28,8 +28,11 @@ The repository includes experiments involving several modelling families, includ
 - Logistic Regression
 - Random Forest
 - Support Vector Machines (SVM)
-- XGBoost
+- GRU
+- LSTM
+- BiLSTMs
 - Deep Neural Networks
+- CNN
 - BERT
 - RoBERTa
 - Large Language Models (LLMs)
