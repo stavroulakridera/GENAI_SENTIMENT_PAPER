@@ -23,7 +23,7 @@ from sklearn.metrics import (
 
 MODEL = "llama3.2:3b"
 
-INPUT_FILE = "results/clean_validation.csv"
+INPUT_FILE = "data/processed/clean_validation.csv"
 
 # First technical pilot.
 # After successful execution change to None for all 1000.
