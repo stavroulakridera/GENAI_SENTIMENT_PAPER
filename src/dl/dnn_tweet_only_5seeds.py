@@ -36,8 +36,8 @@ MAX_FEATURES = 10000
 BATCH_SIZE = 128
 EPOCHS = 15
 
-TRAIN_FILE = "results/clean_train.csv"
-TEST_FILE = "results/clean_validation.csv"
+TRAIN_FILE = "data/processed/clean_train.csv"
+TEST_FILE = "data/processed/clean_validation.csv"
 
 RESULTS_DIR = "results/tables"
 
