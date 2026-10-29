@@ -24,7 +24,7 @@ MODEL_NAME = "gemma3:4b"
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
-INPUT_FILE = "results/entity_tweet_validation.csv"
+INPUT_FILE = "data/processed/entity_tweet_validation.csv"
 
 RESULTS_DIR = "results/tables"
 
