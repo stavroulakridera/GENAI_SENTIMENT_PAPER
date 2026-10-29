@@ -24,7 +24,7 @@ from sklearn.metrics import (
 
 MODEL = "llama3.2:3b"
 
-TEST_FILE = "results/clean_validation.csv"
+TEST_FILE = "data/processed/clean_validation.csv"
 
 RANDOM_STATE = 42
 
