@@ -24,8 +24,8 @@ print("=" * 65)
 # 1. LOAD DATA
 # =========================================================
 
-train_df = pd.read_csv("results/entity_tweet_train.csv")
-test_df = pd.read_csv("results/entity_tweet_validation.csv")
+train_df = pd.read_csv("data/processed/entity_tweet_train.csv")
+test_df = pd.read_csv("data/processed/entity_tweet_validation.csv")
 
 X_train_text = train_df["Entity_Tweet"].astype(str)
 X_test_text = test_df["Entity_Tweet"].astype(str)
