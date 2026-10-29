@@ -69,11 +69,11 @@ print("=" * 65)
 print("\nLoading clean datasets...")
 
 train_df = pd.read_csv(
-    "results/clean_train.csv"
+    "data/processed/clean_train.csv"
 )
 
 test_df = pd.read_csv(
-    "results/clean_validation.csv"
+    "data/processed/clean_validation.csv"
 )
 
 print("\nFull training dataset:")
