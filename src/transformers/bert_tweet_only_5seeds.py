@@ -79,11 +79,11 @@ print("\nDevice:", DEVICE)
 print("\nLoading clean Tweet-only datasets...")
 
 train_df = pd.read_csv(
-    "results/clean_train.csv"
+    "data/processed/clean_train.csv"
 )
 
 test_df = pd.read_csv(
-    "results/clean_validation.csv"
+    "data/processed/clean_validation.csv"
 )
 
 required_columns = [
