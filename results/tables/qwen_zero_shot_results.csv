@@ -1,0 +1,2 @@
+Model,Prompting,Input,Total Samples,Valid Outputs,Invalid Outputs,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Balanced Accuracy,MCC,Total Time (s),Mean Latency (s),Median Latency (s),Temperature,Seed
+Qwen2.5 3B,Zero-shot,Entity + Tweet,1000,1000,0,0.514,0.4889075294040561,0.48544797789116395,0.47056382992938073,0.4928896969384417,0.48544797789116395,0.3445986144970593,282.27494495897554,0.28175228480511577,0.24125602052663453,0,42

@@ -1,0 +1,2 @@
+Training_Rows,Validation_Rows,Training_Unique_Tweet_IDs,Validation_Unique_Tweet_IDs,Common_Tweet_IDs,Validation_ID_Overlap_Percentage,Same_ID_Pairs,Exact_Text_Matches,Same_Entity_Percentage,Same_Label_Percentage,Mean_Text_Similarity,Median_Text_Similarity,Similarity_90_Pairs,Similarity_90_Same_Label,Similarity_90_Label_Agreement
+68625,1000,12268,1000,985,98.5,5070,0,100.0,100.0,0.7046327118246598,0.8051244784096769,1178,1178,100.0

@@ -1,0 +1,2 @@
+Model,Prompting,Evaluation,Input,Total Samples,Valid Outputs,Invalid Outputs,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Balanced Accuracy,MCC,Recorded Inference Time (s),Mean Latency (s),Median Latency (s),Temperature,Seed
+Qwen2.5 3B,Few-shot,Group-disjoint robustness test subset,Entity + Tweet,6865,6865,0,0.4750182083029862,0.4337949519670904,0.4366051443201332,0.4327006116046298,0.4672938955354187,0.4366051443201332,0.28720100316750335,2044.1709518675925,0.29776707237692535,0.2816396669950336,0,42

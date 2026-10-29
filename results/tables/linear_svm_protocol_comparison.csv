@@ -1,0 +1,3 @@
+Model,Protocol,Accuracy,Macro F1
+Linear SVM,Standard,0.901,0.8993
+Linear SVM,Group-Disjoint,0.5361981063364895,0.5144582374930196
