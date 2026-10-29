@@ -9,8 +9,8 @@ print("=" * 60)
 print("CREATING ENTITY + TWEET DATASET")
 print("=" * 60)
 
-train_df = pd.read_csv("results/clean_train.csv")
-validation_df = pd.read_csv("results/clean_validation.csv")
+train_df = pd.read_csv("data/processed/clean_train.csv")
+validation_df = pd.read_csv("data/processed/clean_validation.csv")
 
 print("\nOriginal training shape:", train_df.shape)
 print("Original validation shape:", validation_df.shape)
@@ -64,8 +64,8 @@ print("Validation:", validation_df["Entity_Tweet"].isna().sum())
 
 os.makedirs("results", exist_ok=True)
 
-train_path = "results/entity_tweet_train.csv"
-validation_path = "results/entity_tweet_validation.csv"
+train_path = "data/processed/entity_tweet_train.csv"
+validation_path = "data/processed/entity_tweet_validation.csv"
 
 train_df.to_csv(train_path, index=False)
 validation_df.to_csv(validation_path, index=False)
