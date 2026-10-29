@@ -1,0 +1,2 @@
+Model,Method,Samples,Valid Outputs,Invalid Outputs,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Total Time (s),Mean Latency (s)
+Llama 3.2 3B,Few-Shot (4-shot),1000,997,3,0.47342026078234706,0.43288212476890525,0.4383781474051771,0.33736764663085306,0.3642557140623599,681.8313502920209,0.6814084380943386

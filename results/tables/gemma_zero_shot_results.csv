@@ -1,0 +1,2 @@
+Model,Prompting,Input,Total Samples,Valid Outputs,Invalid Outputs,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Balanced Accuracy,MCC,Total Time (s),Mean Latency (s),Median Latency (s),Temperature,Seed
+Gemma 3 4B,Zero-shot,Entity + Tweet,1000,1000,0,0.469,0.4606425170602699,0.43759999234085545,0.36647857120093696,0.3910463490204595,0.43759999234085545,0.32057663656166885,1152.9188255000045,1.151771146708692,1.1492971875122748,0,42

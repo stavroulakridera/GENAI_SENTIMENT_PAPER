@@ -1,0 +1,4 @@
+Strategy,Accuracy,Macro_F1
+Zero-Shot,0.4679,0.3581
+Few-Shot,0.4734,0.3374
+Reasoning-Enhanced,0.473,0.33833118344674856

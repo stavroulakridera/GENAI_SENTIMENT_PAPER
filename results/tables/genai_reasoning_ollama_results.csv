@@ -1,0 +1,2 @@
+Model,Method,Samples,Valid Outputs,Invalid Outputs,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Total Time (s),Mean Latency (s)
+Llama 3.2 3B,Reasoning-Enhanced,1000,1000,0,0.473,0.40370364066600806,0.44031147415596333,0.33833118344674856,0.3597235136883816,862.0910824589955,0.8612499861268152
