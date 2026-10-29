@@ -12,8 +12,8 @@ from difflib import SequenceMatcher
 # 1. SETTINGS
 # =========================================================
 
-TRAIN_FILE = "results/clean_train.csv"
-VALIDATION_FILE = "results/clean_validation.csv"
+TRAIN_FILE = "data/processed/clean_train.csv"
+VALIDATION_FILE = "data/processed/clean_validation.csv"
 
 OUTPUT_DIR = "results/tables"
 
