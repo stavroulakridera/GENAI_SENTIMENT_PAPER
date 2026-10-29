@@ -80,7 +80,7 @@ python src/robustness/group_linear_svm_entity.py
 python src/statistical_evaluation/statistical_significance_analysis.py
 ```
 
-Before rerunning the organized scripts, verify that their data/output paths point to the new `data/` and `results/` locations. The original root-level scripts are temporarily retained during repository migration to preserve the exact historical experiment code.
+The organized scripts have been statically audited for the new repository layout. Dataset inputs now use relative paths under `data/raw/`, `data/processed/`, and `data/group_disjoint/`, while generated metrics, predictions, statistical outputs, and comparison tables remain under `results/`. Run scripts from the repository root. The original root-level scripts are retained as historical copies; the organized `src/` hierarchy is the reproducibility entry point.
 
 ## GenAI experiments
 
@@ -169,7 +169,7 @@ Large BERT/RoBERTa checkpoint directories are intentionally excluded from versio
 
 The experiments were developed and executed in Python-based environments, with Transformer experiments using PyTorch/Transformers, neural baselines using TensorFlow/Keras, and local GenAI inference using Ollama.
 
-For archival reproducibility, exact package versions should be captured from the original experiment environment where available. The repository intentionally does not claim versions that were not recorded by the experiment scripts.
+For archival reproducibility, versions explicitly recorded from the original environment are pinned in `requirements.txt` (including scikit-learn 1.4.2 and imbalanced-learn 0.12.2). Versions that were not recorded by the original experiments are intentionally left unpinned rather than reconstructed or guessed.
 
 ## Reproducibility policy
 
