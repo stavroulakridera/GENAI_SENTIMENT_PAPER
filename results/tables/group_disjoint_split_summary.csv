@@ -1,0 +1,2 @@
+Original_Rows,Original_Unique_Tweet_IDs,Training_Rows,Test_Rows,Training_Unique_Tweet_IDs,Test_Unique_Tweet_IDs,Tweet_ID_Overlap,Exact_Text_Overlap,Test_Size_Target,Random_State
+68625,12268,61760,6865,11041,1227,0,0,0.1,42

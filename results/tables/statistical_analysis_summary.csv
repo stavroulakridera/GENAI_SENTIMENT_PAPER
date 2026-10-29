@@ -1,0 +1,11 @@
+Analysis,Model / Comparison,Statistic,Value,Lower,Upper,p-value,Adjusted p-value
+95% Bootstrap CI,Linear SVM,Macro F1,0.9065707812029796,0.887753135377489,0.9251383081500117,,
+95% Bootstrap CI,DNN,Macro F1,0.9754602940675183,0.9655033372086832,0.9845239363217794,,
+95% Bootstrap CI,BERT,Macro F1,0.9672790765742723,0.9551285164161436,0.9779353736842106,,
+95% Bootstrap CI,Qwen2.5 3B Few-shot,Macro F1,0.48841606083679207,0.45790655835199395,0.5178218155887235,,
+McNemar,Linear SVM vs DNN,Exact paired correctness test,,,,1.3742686052727396e-17,4.122805815818219e-17
+McNemar,Linear SVM vs BERT,Exact paired correctness test,,,,9.176485495714726e-11,1.835297099142945e-10
+McNemar,Linear SVM vs Qwen2.5 3B Few-shot,Exact paired correctness test,,,,3.447960936071589e-77,1.3791843744286356e-76
+McNemar,DNN vs BERT,Exact paired correctness test,,,,0.34888887944907765,0.34888887944907765
+McNemar,DNN vs Qwen2.5 3B Few-shot,Exact paired correctness test,,,,1.0231644447919024e-114,5.1158222239595124e-114
+McNemar,BERT vs Qwen2.5 3B Few-shot,Exact paired correctness test,,,,1.0171867452727594e-116,6.103120471636557e-116

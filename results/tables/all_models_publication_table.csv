@@ -1,0 +1,11 @@
+Rank,Model,Family,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1
+1,DNN,Deep Learning,0.963,0.963,0.9634,0.963,0.963
+2,1D CNN,Deep Learning,0.952,0.9491,0.9503,0.9496,0.952
+3,GRU,Deep Learning,0.931,0.9287,0.9287,0.9287,0.931
+4,BiLSTM,Deep Learning,0.913,0.9129,0.9145,0.9128,0.9132
+5,Linear SVM,Machine Learning,0.901,0.9025,0.8995,0.8993,0.9012
+6,LSTM,Deep Learning,0.894,0.8943,0.8948,0.8933,0.8941
+7,Logistic Regression,Machine Learning,0.842,0.844,0.8359,0.838,0.8413
+8,SGD Classifier,Machine Learning,0.834,0.8373,0.8277,0.8297,0.8331
+9,Multinomial Naive Bayes,Machine Learning,0.727,0.7627,0.7105,0.7161,0.7213
+10,Random Forest,Machine Learning,0.704,0.7835,0.6612,0.6506,0.68

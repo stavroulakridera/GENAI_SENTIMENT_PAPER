@@ -1,0 +1,2 @@
+Model,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Training Time (s),Prediction Time (s)
+Logistic Regression,0.842,0.8439942810492547,0.8358746069691061,0.8380101133435672,0.8412591066450847,2.0857757499907166,0.0002532920043449849

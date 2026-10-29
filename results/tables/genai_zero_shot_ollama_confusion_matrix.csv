@@ -1,0 +1,5 @@
+,Pred_Negative,Pred_Neutral,Pred_Positive,Pred_Irrelevant
+True_Negative,222,5,13,25
+True_Neutral,114,11,131,28
+True_Positive,35,3,217,22
+True_Irrelevant,67,3,85,17

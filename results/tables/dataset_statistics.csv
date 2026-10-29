@@ -1,0 +1,6 @@
+Sentiment,Training,Validation
+Negative,20915,266
+Neutral,16826,285
+Positive,18807,277
+Irrelevant,12077,172
+TOTAL,68625,1000

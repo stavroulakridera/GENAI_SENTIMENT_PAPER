@@ -1,0 +1,2 @@
+Model,Seed,Evaluation,Input,Train Samples,Internal Train Samples,Development Samples,Test Samples,Train Tweet_ID Groups,Test Tweet_ID Groups,Tweet_ID Overlap,Exact Text Overlap,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Balanced Accuracy,MCC,Training Time (s),Prediction Time (s),Epochs
+DNN,42,Group-disjoint,Entity + Tweet,61760,55584,6176,6865,11041,1227,0,0,0.5273124544792426,0.5074590625027382,0.504732258815731,0.5046508679024114,0.5238286674028366,0.504732258815731,0.35838341165017057,33.66605595801957,0.4054426660295576,7

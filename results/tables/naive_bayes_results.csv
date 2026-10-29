@@ -1,0 +1,2 @@
+Model,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Training Time (s),Prediction Time (s)
+Multinomial Naive Bayes,0.727,0.7627312345152152,0.7104774072070446,0.7160639521348737,0.7212732397260445,0.09633800000301562,0.0006784579891245812

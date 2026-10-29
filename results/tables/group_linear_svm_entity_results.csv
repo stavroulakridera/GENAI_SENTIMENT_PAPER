@@ -1,0 +1,2 @@
+Model,Evaluation,Input,Train Samples,Test Samples,Train Tweet_ID Groups,Test Tweet_ID Groups,Tweet_ID Overlap,Exact Text Overlap,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Balanced Accuracy,MCC,Training Time (s),Prediction Time (s)
+Linear SVM,Group-disjoint,Entity + Tweet,61760,6865,11041,1227,0,0,0.5512017479970867,0.5314425516085547,0.529250770263883,0.5295497263840432,0.5481138912863397,0.529250770263883,0.3905879060710877,1.5562437910120934,0.0025596669875085354
