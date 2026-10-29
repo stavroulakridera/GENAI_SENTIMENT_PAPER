@@ -176,18 +176,18 @@ print("\nData cleaning completed successfully!")
 # =========================================================
 
 train_df.to_csv(
-    "results/clean_train.csv",
+    "data/processed/clean_train.csv",
     index=False
 )
 
 val_df.to_csv(
-    "results/clean_validation.csv",
+    "data/processed/clean_validation.csv",
     index=False
 )
 
 print("\nClean datasets saved:")
-print("results/clean_train.csv")
-print("results/clean_validation.csv")
+print("data/processed/clean_train.csv")
+print("data/processed/clean_validation.csv")
 
 
 # =========================================================
@@ -520,11 +520,11 @@ print("=" * 60)
 print("\nFiles created:")
 
 print(
-    "1. results/clean_train.csv"
+    "1. data/processed/clean_train.csv"
 )
 
 print(
-    "2. results/clean_validation.csv"
+    "2. data/processed/clean_validation.csv"
 )
 
 print(
