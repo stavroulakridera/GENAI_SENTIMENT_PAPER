@@ -16,10 +16,10 @@ from sklearn.model_selection import GroupShuffleSplit
 RANDOM_STATE = 42
 TEST_SIZE = 0.10
 
-INPUT_FILE = "results/clean_train.csv"
+INPUT_FILE = "data/processed/clean_train.csv"
 
-OUTPUT_TRAIN = "results/group_train.csv"
-OUTPUT_TEST = "results/group_test.csv"
+OUTPUT_TRAIN = "data/group_disjoint/group_train.csv"
+OUTPUT_TEST = "data/group_disjoint/group_test.csv"
 
 os.makedirs("results", exist_ok=True)
 os.makedirs("results/tables", exist_ok=True)
@@ -599,11 +599,11 @@ print(
 print("\nFiles created:")
 
 print(
-    "1. results/group_train.csv"
+    "1. data/group_disjoint/group_train.csv"
 )
 
 print(
-    "2. results/group_test.csv"
+    "2. data/group_disjoint/group_test.csv"
 )
 
 print(
