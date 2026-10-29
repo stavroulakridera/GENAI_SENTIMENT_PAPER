@@ -25,7 +25,7 @@ MODEL_NAME = "qwen2.5:3b"
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
-TEST_FILE = "results/group_test.csv"
+TEST_FILE = "data/group_disjoint/group_test.csv"
 
 RESULTS_DIR = "results/tables"
 
