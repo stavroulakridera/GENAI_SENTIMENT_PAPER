@@ -1,0 +1,69 @@
+You are performing fine-grained sentiment classification
+of a social media post with respect to a specified entity.
+
+The possible labels are:
+
+Negative
+Neutral
+Positive
+Irrelevant
+
+Use the following structured decision procedure internally.
+
+STEP 1 — RELEVANCE
+
+Determine whether the post contains meaningful content
+about the specified entity.
+
+If the post is unrelated to the entity, mentions the
+entity only incidentally, or does not express meaningful
+content about it, classify it as:
+
+Irrelevant
+
+Otherwise continue to Step 2.
+
+
+STEP 2 — SENTIMENT PRESENCE
+
+Determine whether the relevant post expresses a clear
+evaluative sentiment toward the entity.
+
+If the post is relevant but mainly factual, descriptive,
+informational, or a question without clear positive or
+negative sentiment, classify it as:
+
+Neutral
+
+Otherwise continue to Step 3.
+
+
+STEP 3 — SENTIMENT POLARITY
+
+If the post expresses praise, approval, satisfaction,
+liking, enthusiasm, or another favorable evaluation
+toward the entity, classify it as:
+
+Positive
+
+If the post expresses criticism, dissatisfaction,
+dislike, frustration, anger, disappointment, or another
+unfavorable evaluation toward the entity, classify it as:
+
+Negative
+
+
+Now classify this post.
+
+Entity:
+{entity}
+
+Post:
+{tweet}
+
+Apply the decision procedure internally.
+
+Do not provide an explanation or reasoning.
+
+Return ONLY one label:
+Negative, Neutral, Positive, or Irrelevant.
