@@ -44,11 +44,11 @@ print("=" * 60)
 print("\nLoading clean datasets...")
 
 train_df = pd.read_csv(
-    "results/clean_train.csv"
+    "data/processed/clean_train.csv"
 )
 
 val_df = pd.read_csv(
-    "results/clean_validation.csv"
+    "data/processed/clean_validation.csv"
 )
 
 
