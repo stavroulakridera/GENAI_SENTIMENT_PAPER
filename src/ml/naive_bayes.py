@@ -49,12 +49,12 @@ columns = [
 ]
 
 train_df = pd.read_csv(
-    "twitter_training.csv",
+    "data/raw/twitter_training.csv",
     names=columns
 )
 
 val_df = pd.read_csv(
-    "twitter_validation.csv",
+    "data/raw/twitter_validation.csv",
     names=columns
 )
 
