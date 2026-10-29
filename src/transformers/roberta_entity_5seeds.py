@@ -72,11 +72,11 @@ print("\nDevice:", DEVICE)
 print("\nLoading Entity + Tweet datasets...")
 
 train_df = pd.read_csv(
-    "results/entity_tweet_train.csv"
+    "data/processed/entity_tweet_train.csv"
 )
 
 test_df = pd.read_csv(
-    "results/entity_tweet_validation.csv"
+    "data/processed/entity_tweet_validation.csv"
 )
 
 required_columns = [
