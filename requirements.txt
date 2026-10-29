@@ -1,0 +1,27 @@
+# Core data science
+numpy
+pandas
+scipy
+scikit-learn==1.4.2
+imbalanced-learn==0.12.2
+
+# Visualization
+matplotlib
+
+# Deep learning
+tensorflow
+
+# Transformer experiments
+torch
+transformers
+datasets
+accelerate
+
+# Generative AI experiments
+requests
+
+# Notes:
+# GenAI experiments require a local Ollama installation and the model versions
+# specified in the experiment scripts (Llama 3.2 3B, Qwen2.5 3B, Gemma 3 4B).
+# Exact versions for packages not pinned above should be replaced with the
+# versions from the original experimental environment before archival release.

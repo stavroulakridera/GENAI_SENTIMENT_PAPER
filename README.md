@@ -1,104 +1,176 @@
-# Generative AI and Entity-Aware Sentiment Analysis
+# A Systematic Multi-Paradigm Evaluation of Machine Learning, Deep Learning, and Generative AI for Fine-Grained Entity-Level Sentiment Classification
 
-## Overview
+This repository contains the experimental code, dataset organization, prompt templates, predictions, and statistical evaluation artifacts for the paper.
 
-This repository contains the source code, experimental pipeline, evaluation procedures, and results developed as part of a research study on advanced sentiment analysis of social media content.
+## Experimental scope
 
-The study explores and compares traditional Machine Learning (ML), Deep Learning (DL), transformer-based architectures, and Large Language Models (LLMs) within a common experimental framework.
+The study compares four model families for four-class entity-level sentiment classification (Negative, Neutral, Positive, Irrelevant):
 
-A particular focus is placed on investigating whether entity-related information can improve sentiment classification compared with approaches based exclusively on textual content.
+- **Machine Learning:** Multinomial Naive Bayes, Logistic Regression, Linear SVM, SGD, Random Forest.
+- **Deep Learning:** DNN, 1D CNN, LSTM, GRU, BiLSTM.
+- **Transformers:** BERT-base and RoBERTa-base.
+- **Generative AI:** Llama 3.2 3B, Qwen2.5 3B, and Gemma 3 4B under zero-shot, four-shot/few-shot, and reasoning-enhanced prompting.
 
-## Purpose of the Study
+Supervised models are evaluated using both Tweet-only and Entity+Tweet representations. Stochastic supervised experiments use five seeds: **42, 52, 62, 72, 82**.
 
-The primary objective of this study is to systematically investigate the effectiveness of different computational approaches for sentiment classification and to examine the contribution of entity-aware information to predictive performance.
+## Repository structure
 
-The experimental framework compares conventional machine learning algorithms, neural network architectures, transformer-based models, and Large Language Models.
+```text
+.
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── group_disjoint/
+├── src/
+│   ├── preprocessing/
+│   ├── ml/
+│   ├── dl/
+│   ├── transformers/
+│   ├── genai/
+│   ├── robustness/
+│   ├── statistical_evaluation/
+│   └── evaluation/
+├── prompts/
+│   ├── llama/
+│   ├── qwen/
+│   └── gemma/
+├── results/
+├── requirements.txt
+└── README.md
+```
 
-For selected models, two main configurations are investigated:
+## Data
 
-- **Tweet-only:** sentiment classification based exclusively on the textual content of the tweet.
-- **Entity-aware:** sentiment classification incorporating information related to the entity associated with the text.
+The original Twitter sentiment files are stored under `data/raw/`.
 
-Through this comparison, the study aims to determine whether the inclusion of entity-related contextual information provides measurable benefits over text-only sentiment classification.
+Processed files used by the experiments are organized as:
 
-## Models and Approaches
+```text
+data/processed/clean_train.csv
+data/processed/clean_validation.csv
+data/processed/entity_tweet_train.csv
+data/processed/entity_tweet_validation.csv
+```
 
-The repository includes experiments involving several modelling families, including:
+The group-disjoint robustness split is:
 
-- Logistic Regression
-- Random Forest
-- Support Vector Machines (SVM)
-- GRU
-- LSTM
-- BiLSTMs
-- Deep Neural Networks
-- CNN
-- BERT
-- RoBERTa
-- Large Language Models (LLMs)
+```text
+data/group_disjoint/group_train.csv
+data/group_disjoint/group_test.csv
+```
 
-Both conventional and modern NLP approaches are evaluated under a common experimental methodology.
+The group-disjoint split is constructed by Tweet_ID with random state 42 and is checked for zero Tweet_ID overlap and zero exact-text overlap between train and test.
 
-## Experimental Framework
+## Running the experiments
 
-The experimental pipeline includes:
+Create and activate a Python environment, then install dependencies:
 
-1. Data preprocessing and preparation
-2. Text and entity-aware feature configurations
-3. Machine Learning experiments
-4. Deep Learning experiments
-5. Transformer-based experiments
-6. Large Language Model experiments
-7. Performance evaluation
-8. Statistical comparison of model performance
-9. Generation of tables and figures for analysis
+```bash
+pip install -r requirements.txt
+```
 
-The use of a unified experimental framework enables a systematic comparison between different modelling paradigms.
+Run scripts from the repository root. The organized source folders correspond directly to experiment families:
 
-## Evaluation
+```bash
+python src/ml/linear_svm_entity.py
+python src/dl/dnn_entity_5seeds.py
+python src/transformers/bert_entity_5seeds.py
+python src/genai/qwen_few_shot_ollama.py
+python src/robustness/group_linear_svm_entity.py
+python src/statistical_evaluation/statistical_significance_analysis.py
+```
 
-Model performance is evaluated using standard classification metrics, including:
+Before rerunning the organized scripts, verify that their data/output paths point to the new `data/` and `results/` locations. The original root-level scripts are temporarily retained during repository migration to preserve the exact historical experiment code.
+
+## GenAI experiments
+
+Generative AI experiments run locally through Ollama. The evaluated model families are:
+
+- Llama 3.2 3B
+- Qwen2.5 3B
+- Gemma 3 4B
+
+Exact prompt templates are stored under `prompts/`. The prompts require the model to output exactly one of the four labels. Reasoning-enhanced prompts instruct the model to apply relevance, sentiment-presence, and polarity decisions internally while returning only the final label.
+
+For Llama few-shot evaluation, one training example per class is selected by the experiment script and the selected examples are preserved in the experiment outputs. Qwen and Gemma few-shot experiments use the four fixed examples recorded in their prompt templates.
+
+## Evaluation metrics
+
+The principal metrics are:
 
 - Accuracy
-- Precision
-- Recall
-- F1-score
+- Macro-averaged Precision
+- Macro-averaged Recall
+- Macro F1
+- Weighted F1 where applicable
+- Balanced Accuracy
+- Matthews Correlation Coefficient (MCC)
 
-Additional statistical analyses are performed to investigate whether observed differences between modelling approaches are statistically meaningful.
+Prediction CSV files preserve true and predicted labels so that additional metrics, confusion matrices, and paired statistical tests can be computed without retraining.
 
-## Repository Structure
+## Robustness evaluation
 
-The repository contains Python scripts for:
+The `src/robustness/` directory contains:
 
-- Data preprocessing
-- Machine Learning experiments
-- Deep Learning experiments
-- BERT and RoBERTa experiments
-- Tweet-only and entity-aware configurations
-- LLM-based sentiment classification
-- Statistical analysis
-- Generation of figures and result tables
+- Tweet-ID leakage audit
+- Group-disjoint split generation
+- Group-disjoint Linear SVM experiments
+- Group-disjoint DNN experiment
+- Group-disjoint CNN experiment
+- Group-disjoint Qwen few-shot experiment
 
-Experimental outputs and supporting result files are organised within the corresponding results directories.
+The preserved group-disjoint split contains 61,760 training instances and 6,865 test instances, with no Tweet_ID or exact-text overlap.
 
-## Reproducibility
+## Statistical evaluation
 
-The source code is provided to support transparency and reproducibility of the experimental methodology presented in the associated research study.
+`src/statistical_evaluation/statistical_significance_analysis.py` performs:
 
-Large model checkpoints and local virtual-environment files are not included in the repository.
+- Macro-F1 bootstrap confidence intervals
+- 2,000 bootstrap iterations
+- Bootstrap seed 42
+- Pairwise McNemar tests
+- Holm correction for multiple comparisons
 
-## Research Context
+For paired statistical tests involving five-seed DNN/BERT outputs, seed 42 is used as the selected deterministic comparison run.
 
-This repository accompanies research conducted within the context of doctoral research in the areas of Artificial Intelligence, Natural Language Processing, and online social behaviour analysis.
+## Reproducibility parameters
 
-The work investigates how different generations of computational models—from traditional machine learning to transformer architectures and Generative AI—can be used to analyse sentiment expressed in social media content.
+Key fixed parameters include:
 
-## Citation
+- Data/split random state: 42
+- Five-seed experiments: 42, 52, 62, 72, 82
+- TF-IDF vocabulary limit in core supervised experiments: 10,000 features
+- Linear SVM: C=1.0
+- Statistical bootstrap iterations: 2,000
+- Statistical bootstrap seed: 42
 
-If you use this repository or its associated methodology in academic work, please cite the corresponding research paper.
+Model-specific hyperparameters remain explicitly defined in each experiment script.
 
-Full citation information will be added upon publication.
+## Results
 
-## License
+The repository's result artifacts are intended to preserve both aggregate metrics and row-level predictions. This allows evaluation and statistical analyses to be reproduced without repeating expensive model training.
 
-This repository is intended for academic and research purposes.
+Large BERT/RoBERTa checkpoint directories are intentionally excluded from version control. They are not required for reproducing analyses from the saved predictions and metrics.
+
+## Script-to-experiment mapping
+
+| Experiment family | Main scripts |
+| --- | --- |
+| Preprocessing | `src/preprocessing/` |
+| Traditional ML | `src/ml/` |
+| DNN/CNN/LSTM/GRU/BiLSTM | `src/dl/` |
+| BERT/RoBERTa | `src/transformers/` |
+| Llama/Qwen/Gemma | `src/genai/` |
+| Group-disjoint & leakage | `src/robustness/` |
+| Bootstrap/McNemar | `src/statistical_evaluation/` |
+| Cross-model summaries | `src/evaluation/` |
+
+## Computational environment
+
+The experiments were developed and executed in Python-based environments, with Transformer experiments using PyTorch/Transformers, neural baselines using TensorFlow/Keras, and local GenAI inference using Ollama.
+
+For archival reproducibility, exact package versions should be captured from the original experiment environment where available. The repository intentionally does not claim versions that were not recorded by the experiment scripts.
+
+## Reproducibility policy
+
+No published numerical result should be changed during repository reorganization. Repository restructuring is limited to organization, documentation, relative-path adaptation, and preservation of existing experiment outputs. New experiments, if any, should be introduced in separate commits after the reproducibility baseline has been verified.
