@@ -48,8 +48,8 @@ EMBEDDING_DIM = 128
 BATCH_SIZE = 128
 EPOCHS = 10
 
-TRAIN_FILE = "results/group_train.csv"
-TEST_FILE = "results/group_test.csv"
+TRAIN_FILE = "data/group_disjoint/group_train.csv"
+TEST_FILE = "data/group_disjoint/group_test.csv"
 
 RESULTS_DIR = "results/tables"
 
