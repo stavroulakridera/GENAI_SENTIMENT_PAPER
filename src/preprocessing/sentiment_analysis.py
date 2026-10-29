@@ -22,12 +22,12 @@ os.makedirs("results/tables", exist_ok=True)
 columns = ["Tweet_ID", "Entity", "Sentiment", "Tweet"]
 
 train_df = pd.read_csv(
-    "twitter_training.csv",
+    "data/raw/twitter_training.csv",
     names=columns
 )
 
 val_df = pd.read_csv(
-    "twitter_validation.csv",
+    "data/raw/twitter_validation.csv",
     names=columns
 )
 
@@ -300,11 +300,11 @@ print("=" * 60)
 
 output_columns = ["Tweet_ID", "Entity", "Sentiment", "Tweet"]
 
-train_df[output_columns].to_csv("results/clean_train.csv", index=False)
-val_df[output_columns].to_csv("results/clean_validation.csv", index=False)
+train_df[output_columns].to_csv("data/processed/clean_train.csv", index=False)
+val_df[output_columns].to_csv("data/processed/clean_validation.csv", index=False)
 
-print("\nClean training dataset saved: results/clean_train.csv")
-print("Clean validation dataset saved: results/clean_validation.csv")
+print("\nClean training dataset saved: data/processed/clean_train.csv")
+print("Clean validation dataset saved: data/processed/clean_validation.csv")
 print("\nFinal shapes:")
 print("Training:", train_df[output_columns].shape)
 print("Validation:", val_df[output_columns].shape)
