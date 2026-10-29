@@ -29,8 +29,8 @@ print("=" * 60)
 print("DEEP LEARNING EXPERIMENTS")
 print("=" * 60)
 
-train_df = pd.read_csv("results/clean_train.csv")
-test_df = pd.read_csv("results/clean_validation.csv")
+train_df = pd.read_csv("data/processed/clean_train.csv")
+test_df = pd.read_csv("data/processed/clean_validation.csv")
 
 print("\nTraining:", train_df.shape)
 print("Final evaluation:", test_df.shape)
