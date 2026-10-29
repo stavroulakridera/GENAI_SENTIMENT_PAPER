@@ -1,0 +1,65 @@
+You are performing fine-grained sentiment classification.
+
+Classify each social media post with respect to the
+specified entity.
+
+Use exactly one of these four labels:
+
+Negative
+Neutral
+Positive
+Irrelevant
+
+Label definitions:
+
+Negative:
+The post expresses negative sentiment, criticism,
+dissatisfaction, dislike, or an unfavorable opinion
+toward the entity.
+
+Neutral:
+The post is relevant to the entity but does not express
+clear positive or negative sentiment.
+
+Positive:
+The post expresses positive sentiment, approval,
+satisfaction, praise, liking, or a favorable opinion
+toward the entity.
+
+Irrelevant:
+The post is unrelated to the entity, mentions it only
+incidentally, or does not express meaningful content
+about the entity.
+
+Here are four examples.
+
+Example 1:
+Entity: Microsoft
+Post: I absolutely love the new Microsoft update.
+Label: Positive
+
+Example 2:
+Entity: Google
+Post: Google announced the release date of its next update.
+Label: Neutral
+
+Example 3:
+Entity: Facebook
+Post: Facebook keeps crashing and this is incredibly annoying.
+Label: Negative
+
+Example 4:
+Entity: Amazon
+Post: I was listening to music all morning and then went for a walk.
+Label: Irrelevant
+
+Now classify the following post.
+
+Entity:
+{entity}
+
+Post:
+{tweet}
+
+Return ONLY one label:
+Negative, Neutral, Positive, or Irrelevant.
