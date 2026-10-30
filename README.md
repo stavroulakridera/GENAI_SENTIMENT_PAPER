@@ -80,7 +80,7 @@ python src/robustness/group_linear_svm_entity.py
 python src/statistical_evaluation/statistical_significance_analysis.py
 ```
 
-The organized scripts have been statically audited for the new repository layout. Dataset inputs now use relative paths under `data/raw/`, `data/processed/`, and `data/group_disjoint/`, while generated metrics, predictions, statistical outputs, and comparison tables remain under `results/`. Run scripts from the repository root. The original root-level scripts are retained as historical copies; the organized `src/` hierarchy is the reproducibility entry point.
+The organized scripts have been statically audited for the new repository layout. Dataset inputs now use relative paths under `data/raw/`, `data/processed/`, and `data/group_disjoint/`, while generated metrics, predictions, statistical outputs, and comparison tables remain under `results/`. Run scripts from the repository root. The original experiment scripts are retained under `legacy/original_scripts/` as historical copies; the organized `src/` hierarchy is the reproducibility entry point.
 
 ## GenAI experiments
 

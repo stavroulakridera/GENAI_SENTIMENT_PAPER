@@ -14,7 +14,7 @@ Repository-level reproducibility audit completed after the paper repository reor
 - Existing experiment outputs remain under `results/`, including 131 CSV result files.
 - Prompt templates for Llama, Qwen, and Gemma are preserved under `prompts/`.
 - Large model checkpoints are excluded from the repository.
-- Historical root-level scripts are retained for traceability; `src/` is the reproducibility entry point.
+- Historical experiment scripts are retained under `legacy/original_scripts/` for traceability; `src/` is the reproducibility entry point.
 - Existing numerical results, random seeds, model settings, and experimental logic were not changed during restructuring.
 
 ## Execution convention
