@@ -167,8 +167,11 @@ Large BERT/RoBERTa checkpoint directories are intentionally excluded from versio
 
 ## Computational environment
 
-The reproducibility environment was captured from the active project virtual environment:
+The reproducibility environment was captured from the active project machine and virtual environment:
 
+- Operating system: macOS 26.5.2 (Build 25F84)
+- Architecture: arm64
+- Hardware: Apple M2, 8 GB RAM
 - Python 3.13.1
 - NumPy 2.5.2
 - pandas 3.0.5
@@ -183,7 +186,7 @@ The reproducibility environment was captured from the active project virtual env
 - Requests 2.34.2
 - Ollama Python client 0.6.2
 
-The complete environment snapshot is stored in `environment/pip-freeze.txt`.
+The complete package snapshot is stored in `environment/pip-freeze.txt`, and the machine/OS snapshot is stored in `environment/system-info.txt`.
 
 Local GenAI inference used the following Ollama models:
 
