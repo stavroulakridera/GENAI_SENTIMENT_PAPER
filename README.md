@@ -167,9 +167,31 @@ Large BERT/RoBERTa checkpoint directories are intentionally excluded from versio
 
 ## Computational environment
 
-The experiments were developed and executed in Python-based environments, with Transformer experiments using PyTorch/Transformers, neural baselines using TensorFlow/Keras, and local GenAI inference using Ollama.
+The reproducibility environment was captured from the active project virtual environment:
 
-For archival reproducibility, versions explicitly recorded from the original environment are pinned in `requirements.txt` (including scikit-learn 1.4.2 and imbalanced-learn 0.12.2). Versions that were not recorded by the original experiments are intentionally left unpinned rather than reconstructed or guessed.
+- Python 3.13.1
+- NumPy 2.5.2
+- pandas 3.0.5
+- SciPy 1.18.1
+- scikit-learn 1.9.0
+- Matplotlib 3.11.1
+- TensorFlow 2.21.0
+- PyTorch 2.14.0
+- Transformers 5.17.0
+- Datasets 5.0.1
+- Accelerate 1.15.0
+- Requests 2.34.2
+- Ollama Python client 0.6.2
+
+The complete environment snapshot is stored in `environment/pip-freeze.txt`.
+
+Local GenAI inference used the following Ollama models:
+
+- `llama3.2:3b`
+- `qwen2.5:3b`
+- `gemma3:4b`
+
+The captured Ollama model identifiers are stored in `environment/ollama-models.txt`.
 
 ## Reproducibility policy
 
