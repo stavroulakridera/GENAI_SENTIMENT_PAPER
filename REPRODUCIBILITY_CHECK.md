@@ -34,8 +34,12 @@ python src/statistical_evaluation/statistical_significance_analysis.py
 
 The active project virtual environment was captured after the repository reorganization.
 
+- Operating system: macOS 26.5.2 (Build 25F84)
+- Architecture: arm64
+- Hardware: Apple M2, 8 GB RAM
 - Python: 3.13.1
 - Full package snapshot: `environment/pip-freeze.txt`
+- Machine/OS snapshot: `environment/system-info.txt`
 - Install-oriented pinned dependencies: `requirements.txt`
 - Ollama model snapshot: `environment/ollama-models.txt`
 
