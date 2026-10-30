@@ -1,0 +1,10 @@
+# System information
+# Captured from the active project machine
+
+Operating System: macOS
+Product Version: 26.5.2
+Build Version: 25F84
+Architecture: arm64
+Chip: Apple M2
+Memory: 8 GB
+Python: 3.13.1
