@@ -32,12 +32,16 @@ python src/statistical_evaluation/statistical_significance_analysis.py
 
 ## Dependency provenance
 
-Exact versions that were explicitly recorded from the original environment are pinned in `requirements.txt`, including:
+The active project virtual environment was captured after the repository reorganization.
 
-- scikit-learn 1.4.2
-- imbalanced-learn 0.12.2
+- Python: 3.13.1
+- Full package snapshot: `environment/pip-freeze.txt`
+- Install-oriented pinned dependencies: `requirements.txt`
+- Ollama model snapshot: `environment/ollama-models.txt`
 
-Versions that were not recorded by the original experiment environment are intentionally not guessed. Before final archival release, they should only be pinned if they can be recovered from the original environment (for example, from the original virtual environment or a saved `pip freeze`).
+Key recorded versions include scikit-learn 1.9.0, TensorFlow 2.21.0, PyTorch 2.14.0, Transformers 5.17.0, pandas 3.0.5, NumPy 2.5.2, and Ollama 0.6.2.
+
+The local GenAI models are `llama3.2:3b`, `qwen2.5:3b`, and `gemma3:4b`.
 
 ## Scope of this check
 
