@@ -75,3 +75,11 @@ jobs:
           assert abs(qwen - reported) < 1e-10, (qwen, reported)
           print("DNN/CNN/BERT/Qwen metrics: PASS")
           PY
+
+      - name: Upload independently recalculated metric tables
+        uses: actions/upload-artifact@v4
+        with:
+          name: recalculated-classification-metrics
+          path: results/derived/
+          if-no-files-found: error
+          retention-days: 30
