@@ -44,8 +44,8 @@ different experiment with a separately named output path.
 
 ## Expected file outputs from newly executed experiments
 
-- `results/tables/group_dnn_entity_predictions.csv`
-- `results/tables/group_cnn_entity_predictions.csv`
+- `results/tables/group_dnn_entity_groupaware_predictions.csv`
+- `results/tables/group_cnn_entity_groupaware_predictions.csv`
 - `results/tables/group_bert_entity_5seeds_predictions.csv`
 - `results/tables/group_bert_entity_5seeds_results.csv`
 - `results/tables/group_bert_entity_5seeds_summary.csv`
@@ -53,11 +53,7 @@ different experiment with a separately named output path.
 - `results/derived/class_metrics.csv`
 - `results/derived/confusion_counts.csv`
 
-**Do not run the corrected DNN/CNN scripts against the main branch's
-historical results directory without making a copy first.** They use the
-same output filenames as the existing single-seed robustness experiments.
-Commit newly generated outputs only after verification, and never replace
-paper scores automatically.
+The corrected DNN/CNN scripts intentionally use new \`*_groupaware_*\` filenames, so the historical single-seed output CSVs are retained. Commit newly generated outputs only after verification, and never replace paper scores automatically.
 
 ## Methodological decisions not yet implemented
 

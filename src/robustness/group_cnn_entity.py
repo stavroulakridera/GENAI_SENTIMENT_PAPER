@@ -60,17 +60,17 @@ os.makedirs(
 
 RESULT_FILE = os.path.join(
     RESULTS_DIR,
-    "group_cnn_entity_results.csv"
+    "group_cnn_entity_groupaware_results.csv"
 )
 
 PREDICTION_FILE = os.path.join(
     RESULTS_DIR,
-    "group_cnn_entity_predictions.csv"
+    "group_cnn_entity_groupaware_predictions.csv"
 )
 
 CONFUSION_FILE = os.path.join(
     RESULTS_DIR,
-    "group_cnn_entity_confusion_matrix.csv"
+    "group_cnn_entity_groupaware_confusion_matrix.csv"
 )
 
 

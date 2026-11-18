@@ -211,3 +211,5 @@ completed and their saved prediction files have passed the output audit.**
 Run `python src/evaluation/recompute_class_metrics.py` to generate
 `results/derived/` without changing original `results/tables/` artifacts.
 Full instructions: `docs/REPRODUCIBILITY_CORRECTIONS.md`.
+
+The corrected group-aware DNN/CNN experiments write to distinct `*_groupaware_*` filenames; preserved original result CSVs are never overwritten by those scripts.
