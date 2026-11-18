@@ -38,7 +38,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 # 1. SETTINGS
 # =========================================================
 
-RANDOM_STATE = 42
+RANDOM_STATE = int(os.environ.get("SENTIMENT_SEED", "42"))
+if RANDOM_STATE not in (42, 52, 62, 72, 82):
+    raise ValueError("SENTIMENT_SEED must be one of 42, 52, 62, 72, 82")
 SPLIT_SEED = 42
 
 VOCAB_SIZE = 10000
