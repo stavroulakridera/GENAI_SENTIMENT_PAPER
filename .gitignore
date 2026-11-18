@@ -26,3 +26,9 @@ huggingface/
 # Temporary files
 *.tmp
 *.log
+
+# Generated research outputs are local, not version-controlled
+/results/**
+!/results/.gitkeep
+/runs/
+/checkpoints/

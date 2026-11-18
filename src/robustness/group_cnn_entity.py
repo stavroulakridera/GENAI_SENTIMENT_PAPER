@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-from sklearn.model_selection import train_test_split
+from group_split_utils import group_aware_train_dev_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import (
     accuracy_score,
@@ -38,7 +38,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 # 1. SETTINGS
 # =========================================================
 
-RANDOM_STATE = 42
+RANDOM_STATE = int(os.environ.get("SENTIMENT_SEED", "42"))
+if RANDOM_STATE not in (42, 52, 62, 72, 82):
+    raise ValueError("SENTIMENT_SEED must be one of 42, 52, 62, 72, 82")
 SPLIT_SEED = 42
 
 VOCAB_SIZE = 10000
@@ -60,17 +62,17 @@ os.makedirs(
 
 RESULT_FILE = os.path.join(
     RESULTS_DIR,
-    "group_cnn_entity_results.csv"
+    "group_cnn_entity_groupaware_results.csv"
 )
 
 PREDICTION_FILE = os.path.join(
     RESULTS_DIR,
-    "group_cnn_entity_predictions.csv"
+    "group_cnn_entity_groupaware_predictions.csv"
 )
 
 CONFUSION_FILE = os.path.join(
     RESULTS_DIR,
-    "group_cnn_entity_confusion_matrix.csv"
+    "group_cnn_entity_groupaware_confusion_matrix.csv"
 )
 
 
@@ -283,11 +285,8 @@ indices = np.arange(
     len(train_df)
 )
 
-internal_train_indices, dev_indices = train_test_split(
-    indices,
-    test_size=0.10,
-    random_state=SPLIT_SEED,
-    stratify=y_group_train
+internal_train_indices, dev_indices = group_aware_train_dev_split(
+    train_df, test_size=0.10, random_state=SPLIT_SEED
 )
 
 
