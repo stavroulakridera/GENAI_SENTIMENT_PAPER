@@ -23,7 +23,9 @@ FILES = {
     "Llama reasoning": ("standard", "genai_reasoning_ollama_predictions.csv", 1000),
     "Group SVM": ("group-disjoint", "group_linear_svm_entity_predictions.csv", 6865),
     "Group DNN": ("group-disjoint", "group_dnn_entity_predictions.csv", 6865),
+    "Group-aware DNN": ("group-disjoint", "group_dnn_entity_groupaware_predictions.csv", 6865),
     "Group CNN": ("group-disjoint", "group_cnn_entity_predictions.csv", 6865),
+    "Group-aware CNN": ("group-disjoint", "group_cnn_entity_groupaware_predictions.csv", 6865),
     "Group Qwen": ("group-disjoint", "group_qwen_few_shot_predictions.csv", 6865),
     "Group BERT": ("group-disjoint", "group_bert_entity_5seeds_predictions.csv", 6865),
 }
