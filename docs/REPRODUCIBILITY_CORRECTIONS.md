@@ -68,3 +68,14 @@ The corrected DNN/CNN scripts intentionally use new \`*_groupaware_*\` filenames
   descriptive and not causal leakage estimates.
 - No new scores are claimed in this branch. GPU/Apple MPS training has
   not been executed as part of this code-only review.
+
+## Metric-audit schema
+
+The read-only evaluator supports both old `Sentiment`/`Prediction` columns
+and later `True_Label`/`Predicted_Label` columns. It checks that each
+prediction file has the expected test-set size for every seed, includes all
+four original labels, and uses the full test denominator even for invalid LLM
+outputs. It covers all 24 supervised input-condition configurations, all 9 LLM
+configurations, four historical group runs and three proposed group-aware runs.
+
+Run `python -m unittest discover -s tests -v` before executing any training.
