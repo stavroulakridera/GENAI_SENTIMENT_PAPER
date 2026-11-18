@@ -199,3 +199,15 @@ The captured Ollama model identifiers are stored in `environment/ollama-models.t
 ## Reproducibility policy
 
 No published numerical result should be changed during repository reorganization. Repository restructuring is limited to organization, documentation, relative-path adaptation, and preservation of existing experiment outputs. New experiments, if any, should be introduced in separate commits after the reproducibility baseline has been verified.
+
+## Methodological correction branch (not yet paper results)
+
+The separate audit branch adds `src/robustness/group_split_utils.py`,
+group-aware DNN/CNN training/development splits, a five-seed group-disjoint
+BERT implementation, and a read-only per-class metric recalculator.
+
+**Do not replace any manuscript scores until the revised training runs have
+completed and their saved prediction files have passed the output audit.**
+Run `python src/evaluation/recompute_class_metrics.py` to generate
+`results/derived/` without changing original `results/tables/` artifacts.
+Full instructions: `docs/REPRODUCIBILITY_CORRECTIONS.md`.

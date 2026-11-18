@@ -1,17 +1,3 @@
-Example {i}
-
-Entity:
-{example["Entity"]}
-
-Post:
-{example["Tweet"]}
-
-Correct label:
-{example["Sentiment"]}
-
-"""
-
-    prompt = f"""
 You are a sentiment classification system.
 
 Your task is to classify the sentiment of a social-media
@@ -62,3 +48,4 @@ Return ONLY one label:
 Negative, Neutral, Positive, or Irrelevant.
 
 Do not provide an explanation.
+

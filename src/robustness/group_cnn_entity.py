@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-from sklearn.model_selection import train_test_split
+from group_split_utils import group_aware_train_dev_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import (
     accuracy_score,
@@ -283,11 +283,8 @@ indices = np.arange(
     len(train_df)
 )
 
-internal_train_indices, dev_indices = train_test_split(
-    indices,
-    test_size=0.10,
-    random_state=SPLIT_SEED,
-    stratify=y_group_train
+internal_train_indices, dev_indices = group_aware_train_dev_split(
+    train_df, test_size=0.10, random_state=SPLIT_SEED
 )
 
 
