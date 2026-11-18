@@ -73,6 +73,7 @@ locally; original result files are not required in the public repository.
 | Consolidated model comparison | `src/evaluation/all_models_comparison.py` |
 | Class precision, recall, F1 and invalid-output-aware metrics | `src/evaluation/recompute_class_metrics.py` |
 | Bootstrap intervals and Holm-adjusted McNemar comparisons | `src/statistical_evaluation/statistical_significance_analysis.py` |
+| Representative per-class classification errors | `src/evaluation/export_class_errors.py` |
 
 Statistics require locally generated row-level predictions as inputs.
 
