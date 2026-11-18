@@ -9,7 +9,7 @@ Models in Entity-Level Sentiment Classification" (30-page Frontiers draft).
 
 1. Restore the **original 10.3-MB training CSV** to
    `data/raw/twitter_training.csv` using the pre-existing Git blob from
-   `legacy/original_data/twitter_training.csv` (previous raw file was empty).
+   the identical previously versioned `legacy/original_data/twitter_training.csv` blob (previous raw file was empty). The duplicate `legacy/` folder has since been removed from the working tree, but the pre-cleanup Git commit preserves it.
 2. Make the internal DNN/CNN development splits **Tweet-ID-disjoint**.
    The fixed external group-disjoint test dataset is not touched.
 3. Add `src/robustness/group_bert_entity_5seeds.py`, which uses the
